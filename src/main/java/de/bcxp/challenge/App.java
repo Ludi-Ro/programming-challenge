@@ -13,6 +13,15 @@ public final class App {
     public static void main(String... args) {
 
         // Your preparation code …
+        //Task 1
+        /*
+        new List WeatherData = Reader(WeatherData)
+        new WeatherHandler WeatherHandler = WeatherHandler(WeatherData)
+
+        Solution: Print(WeatherHandler.getDayWithSmallestTempSpread)
+         */
+
+
 
         String dayWithSmallestTempSpread = "Someday";     // Your day analysis function call …
         System.out.printf("Day with smallest temperature spread: %s%n", dayWithSmallestTempSpread);
