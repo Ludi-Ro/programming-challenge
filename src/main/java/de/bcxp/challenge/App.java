@@ -1,5 +1,10 @@
 package de.bcxp.challenge;
 
+import de.bcxp.challenge.Reader.CsvReader;
+
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * The entry class for your solution. This class is only aimed as starting point and not intended as baseline for your software
  * design. Read: create your own classes and packages as appropriate.
@@ -14,8 +19,10 @@ public final class App {
 
         // Your preparation code …
         //Task 1
+        CsvReader reader = new CsvReader();
+        List<String[]> weatherData = reader.ReturnCsvAsList("src/main/resources/de/bcxp/challenge/weather.csv");
+        //System.out.println(Arrays.deepToString(weatherData.toArray()));
         /*
-        new List WeatherData = Reader(WeatherData)
         new WeatherHandler WeatherHandler = WeatherHandler(WeatherData)
 
         Solution: Print(WeatherHandler.getDayWithSmallestTempSpread)
