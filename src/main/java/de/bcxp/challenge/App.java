@@ -1,9 +1,8 @@
 package de.bcxp.challenge;
 
-import de.bcxp.challenge.Reader.CsvReader;
-import de.bcxp.challenge.Handler.WeatherHandler;
+import de.bcxp.challenge.reader.CsvReader;
+import de.bcxp.challenge.handler.WeatherHandler;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**

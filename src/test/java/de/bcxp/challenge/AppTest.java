@@ -19,7 +19,7 @@ class AppTest {
 
     @Test
     void aPointlessTest() {
-        assertEquals("successful", successLabel, "My expectations were not met");
+        assertEquals("successfuls", successLabel, "My expectations were not met");
     }
 
 }

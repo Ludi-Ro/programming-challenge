@@ -1,4 +1,4 @@
-package de.bcxp.challenge.Handler;
+package de.bcxp.challenge.handler;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package de.bcxp.challenge.Reader;
+package de.bcxp.challenge.reader;
 
 import com.opencsv.CSVReader;
 import java.io.FileReader;
