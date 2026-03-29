@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class WeatherHandlerTest {
 
     CsvReader reader = new CsvReader();
-    List<String[]> weatherData = reader.ReturnCsvAsList("src/main/resources/de/bcxp/challenge/weather.csv");
+    List<String[]> weatherData = reader.ReturnCsvAsList("src/main/resources/de/bcxp/challenge/weather.csv", ',');
     WeatherHandler weatherHandler = new WeatherHandler();
 
     @Test

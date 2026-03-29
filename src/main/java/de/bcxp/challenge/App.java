@@ -2,6 +2,7 @@ package de.bcxp.challenge;
 
 import de.bcxp.challenge.reader.CsvReader;
 import de.bcxp.challenge.handler.WeatherHandler;
+import de.bcxp.challenge.handler.CountryHandler;
 
 import java.util.List;
 
@@ -20,20 +21,24 @@ public final class App {
         // Your preparation code …
         //Task 1
         CsvReader reader = new CsvReader();
-        List<String[]> weatherData = reader.ReturnCsvAsList("src/main/resources/de/bcxp/challenge/weather.csv");
+        List<String[]> weatherData = reader.ReturnCsvAsList("src/main/resources/de/bcxp/challenge/weather.csv", ',');
+        List<String[]> countryData = reader.ReturnCsvAsList("src/main/resources/de/bcxp/challenge/countries.csv", ';');
 
         WeatherHandler weatherHandler = new WeatherHandler();
-        String dayWithSmallestTempSpread = weatherHandler.ReturnDayWithSmallestTempSpread(weatherData);
+        CountryHandler countryHandler = new CountryHandler();
 
+        String dayWithSmallestTempSpread = weatherHandler.ReturnDayWithSmallestTempSpread(weatherData);
         //System.out.println(Arrays.deepToString(weatherData.toArray()));
         //Solution: Print(WeatherHandler.getDayWithSmallestTempSpread)
         //String[] row = weatherData.get(1);
         //System.out.printf(row[1]);
+        //System.out.println(countryData.get(1)[0]);
+        String countryWithHighestPopDensity = countryHandler.ReturnCountryWithHighestPopDensity(countryData);
 
         //String dayWithSmallestTempSpread = "Someday";     // Your day analysis function call …
         System.out.printf("Day with smallest temperature spread: %s%n", dayWithSmallestTempSpread);
 
-        String countryWithHighestPopulationDensity = "Some country"; // Your population density analysis function call …
-        System.out.printf("Country with highest population density: %s%n", countryWithHighestPopulationDensity);
+        //String countryWithHighestPopulationDensity = "Some country"; // Your population density analysis function call …
+        System.out.printf("Country with highest population density: %s%n", countryWithHighestPopDensity);
     }
 }
