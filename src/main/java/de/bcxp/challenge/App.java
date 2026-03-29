@@ -18,27 +18,20 @@ public final class App {
      */
     public static void main(String... args) {
 
-        // Your preparation code …
-        //Task 1
         CsvReader reader = new CsvReader();
+        
+        //Task 1
         List<String[]> weatherData = reader.ReturnCsvAsList("src/main/resources/de/bcxp/challenge/weather.csv", ',');
-        List<String[]> countryData = reader.ReturnCsvAsList("src/main/resources/de/bcxp/challenge/countries.csv", ';');
 
         WeatherHandler weatherHandler = new WeatherHandler();
-        CountryHandler countryHandler = new CountryHandler();
-
         String dayWithSmallestTempSpread = weatherHandler.ReturnDayWithSmallestTempSpread(weatherData);
-        //System.out.println(Arrays.deepToString(weatherData.toArray()));
-        //Solution: Print(WeatherHandler.getDayWithSmallestTempSpread)
-        //String[] row = weatherData.get(1);
-        //System.out.printf(row[1]);
-        //System.out.println(countryData.get(1)[0]);
-        String countryWithHighestPopDensity = countryHandler.ReturnCountryWithHighestPopDensity(countryData);
-
-        //String dayWithSmallestTempSpread = "Someday";     // Your day analysis function call …
         System.out.printf("Day with smallest temperature spread: %s%n", dayWithSmallestTempSpread);
 
-        //String countryWithHighestPopulationDensity = "Some country"; // Your population density analysis function call …
+        //Task 2
+        List<String[]> countryData = reader.ReturnCsvAsList("src/main/resources/de/bcxp/challenge/countries.csv", ';');
+
+        CountryHandler countryHandler = new CountryHandler();
+        String countryWithHighestPopDensity = countryHandler.ReturnCountryWithHighestPopDensity(countryData);
         System.out.printf("Country with highest population density: %s%n", countryWithHighestPopDensity);
     }
 }

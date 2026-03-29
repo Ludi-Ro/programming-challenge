@@ -4,8 +4,6 @@ import java.util.List;
 
 public class WeatherHandler {
 
-    //List WeatherData = WeatherData
-
     //Calculates the temperature spread of a given data row
     public int CalculateRowTempSpread(String[] dayData) {
         int tempSpread = Integer.parseInt(dayData[1])-Integer.parseInt(dayData[2]);
