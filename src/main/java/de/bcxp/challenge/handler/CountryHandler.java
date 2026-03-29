@@ -17,7 +17,7 @@ public class CountryHandler {
     }
 
     //Calculates the country with the highest population per square kilometre
-    public String ReturnCountryWithHighestPopDensity (List<String[]> countryData) {
+    public String ReturnCountryWithHighestPopDensity(List<String[]> countryData) {
         int countryWithHighestPopDensity = 1;
         for (int i = 1; i < countryData.size(); i++) {
             if (CalculatePopulationDensityOfRow(countryData.get(i))

@@ -15,13 +15,13 @@ public class WeatherHandlerTest {
 
     @Test
     void getTemperatureSpread() {
-        int spread = weatherHandler.CalculateRowTempSpread(weatherData.get(1));
-        assertEquals(29, spread, "Temperature Spread not calculated correctly");
+        int tempSpread = weatherHandler.CalculateRowTempSpread(weatherData.get(1));
+        assertEquals(29, tempSpread, "Temperature spread not calculated correctly");
     }
 
     @Test
     void getDayWithSmallestTempSpread() {
         String dayWithSmallestTempSpread = weatherHandler.ReturnDayWithSmallestTempSpread(weatherData);
-        assertEquals("14", dayWithSmallestTempSpread, "day with smallest temperature spread not chosen correctly");
+        assertEquals("14", dayWithSmallestTempSpread, "Day with smallest temperature spread not chosen correctly");
     }
 }
