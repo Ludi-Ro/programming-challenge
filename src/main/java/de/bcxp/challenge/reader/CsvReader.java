@@ -14,7 +14,7 @@ import java.io.IOException;
 public class CsvReader {
 
     //Transforms the weather.csv file to a List filled with String arrays (rows)
-    public List<String[]> ReturnCsvAsList (String csvFile, char separator) {
+    public List<String[]> returnCsvAsList(String csvFile, char separator) {
         try{
             CSVParser parser = new CSVParserBuilder()
                     .withSeparator(separator)

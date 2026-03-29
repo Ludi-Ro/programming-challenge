@@ -19,19 +19,19 @@ public final class App {
     public static void main(String... args) {
 
         CsvReader reader = new CsvReader();
-        
+
         //Task 1
-        List<String[]> weatherData = reader.ReturnCsvAsList("src/main/resources/de/bcxp/challenge/weather.csv", ',');
+        List<String[]> weatherData = reader.returnCsvAsList("src/main/resources/de/bcxp/challenge/weather.csv", ',');
 
         WeatherHandler weatherHandler = new WeatherHandler();
-        String dayWithSmallestTempSpread = weatherHandler.ReturnDayWithSmallestTempSpread(weatherData);
+        String dayWithSmallestTempSpread = weatherHandler.returnDayWithSmallestTempSpread(weatherData);
         System.out.printf("Day with smallest temperature spread: %s%n", dayWithSmallestTempSpread);
 
         //Task 2
-        List<String[]> countryData = reader.ReturnCsvAsList("src/main/resources/de/bcxp/challenge/countries.csv", ';');
+        List<String[]> countryData = reader.returnCsvAsList("src/main/resources/de/bcxp/challenge/countries.csv", ';');
 
         CountryHandler countryHandler = new CountryHandler();
-        String countryWithHighestPopDensity = countryHandler.ReturnCountryWithHighestPopDensity(countryData);
+        String countryWithHighestPopDensity = countryHandler.returnCountryWithHighestPopDensity(countryData);
         System.out.printf("Country with highest population density: %s%n", countryWithHighestPopDensity);
     }
 }

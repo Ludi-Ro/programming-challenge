@@ -5,7 +5,7 @@ import java.util.List;
 public class CountryHandler {
 
     //Calculates the Population density of a given data row
-    public double CalculatePopulationDensityOfRow(String[] singleCountryData) {
+    public double calculatePopulationDensityOfRow(String[] singleCountryData) {
 
         //Filters and replaces that one wierd number-format
         if(singleCountryData[3].contains(",")) {
@@ -17,11 +17,11 @@ public class CountryHandler {
     }
 
     //Calculates the country with the highest population per square kilometre
-    public String ReturnCountryWithHighestPopDensity(List<String[]> countryData) {
+    public String returnCountryWithHighestPopDensity(List<String[]> countryData) {
         int countryWithHighestPopDensity = 1;
         for (int i = 1; i < countryData.size(); i++) {
-            if (CalculatePopulationDensityOfRow(countryData.get(i))
-                    > CalculatePopulationDensityOfRow(countryData.get(countryWithHighestPopDensity))) {
+            if (calculatePopulationDensityOfRow(countryData.get(i))
+                    > calculatePopulationDensityOfRow(countryData.get(countryWithHighestPopDensity))) {
                 countryWithHighestPopDensity = i;
             }
         }

@@ -9,18 +9,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CountryHandlerTest {
 
     CsvReader reader = new CsvReader();
-    List<String[]> countryData = reader.ReturnCsvAsList("src/main/resources/de/bcxp/challenge/countries.csv", ';');
+    List<String[]> countryData = reader.returnCsvAsList("src/main/resources/de/bcxp/challenge/countries.csv", ';');
     CountryHandler countryHandler = new CountryHandler();
 
     @Test
     void getPopulationDensity() {
-        double popDensity = countryHandler.CalculatePopulationDensityOfRow(countryData.get(1));
+        double popDensity = countryHandler.calculatePopulationDensityOfRow(countryData.get(1));
         assertEquals(106.44565022956293, popDensity, "Population density not calculated correctly");
     }
 
     @Test
     void getCountryWithHighestPopDensity() {
-        String countryWithHighestPopDensity = countryHandler.ReturnCountryWithHighestPopDensity(countryData);
+        String countryWithHighestPopDensity = countryHandler.returnCountryWithHighestPopDensity(countryData);
         assertEquals("Malta", countryWithHighestPopDensity, "Country with highest population density not chosen correctly");
     }
 }
