@@ -9,6 +9,8 @@ import java.io.IOException;
 
 
 public class CsvReader {
+
+    //Transforms the weather.csv file to a List filled with String arrays (rows)
     public List<String[]> ReturnCsvAsList (String csvFile) {
         try{
             CSVReader reader = new CSVReader(new FileReader(csvFile));

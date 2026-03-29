@@ -1,6 +1,7 @@
 package de.bcxp.challenge;
 
 import de.bcxp.challenge.Reader.CsvReader;
+import de.bcxp.challenge.Handler.WeatherHandler;
 
 import java.util.Arrays;
 import java.util.List;
@@ -21,16 +22,16 @@ public final class App {
         //Task 1
         CsvReader reader = new CsvReader();
         List<String[]> weatherData = reader.ReturnCsvAsList("src/main/resources/de/bcxp/challenge/weather.csv");
+
+        WeatherHandler weatherHandler = new WeatherHandler();
+        String dayWithSmallestTempSpread = weatherHandler.ReturnDayWithSmallestTempSpread(weatherData);
+
         //System.out.println(Arrays.deepToString(weatherData.toArray()));
-        /*
-        new WeatherHandler WeatherHandler = WeatherHandler(WeatherData)
+        //Solution: Print(WeatherHandler.getDayWithSmallestTempSpread)
+        //String[] row = weatherData.get(1);
+        //System.out.printf(row[1]);
 
-        Solution: Print(WeatherHandler.getDayWithSmallestTempSpread)
-         */
-
-
-
-        String dayWithSmallestTempSpread = "Someday";     // Your day analysis function call …
+        //String dayWithSmallestTempSpread = "Someday";     // Your day analysis function call …
         System.out.printf("Day with smallest temperature spread: %s%n", dayWithSmallestTempSpread);
 
         String countryWithHighestPopulationDensity = "Some country"; // Your population density analysis function call …
